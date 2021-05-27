@@ -889,8 +889,9 @@ GameObject:
   m_Component:
   - component: {fileID: 896697199}
   - component: {fileID: 896697200}
+  - component: {fileID: 896697201}
   m_Layer: 0
-  m_Name: Pivot
+  m_Name: Pivot3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -923,10 +924,29 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 2
+  m_CollisionDetection: 3
+--- !u!95 &896697201
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896697198}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6d83cec0511c13f4c901188bbed77b30, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &966706487
 GameObject:
   m_ObjectHideFlags: 0
@@ -1029,9 +1049,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1076831958}
-  - component: {fileID: 1076831959}
   m_Layer: 0
-  m_Name: Door (2)
+  m_Name: DoorThree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1053,25 +1072,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!95 &1076831959
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1076831957}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 701a289217523584789ad0237835357e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1103838003
 GameObject:
   m_ObjectHideFlags: 0
@@ -1178,7 +1178,7 @@ Transform:
   m_GameObject: {fileID: 1182788997}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.36000004, y: 1.14, z: -0.026000023}
-  m_LocalScale: {x: 5, y: 5, z: 10.27}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -1211,7 +1211,7 @@ MonoBehaviour:
   animator: {fileID: 1766370813}
   layerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1024
   enterTriggerName: Enter
   exitTriggerName: Exit
   occupiedBoolName: Occupied
@@ -1399,6 +1399,7 @@ GameObject:
   - component: {fileID: 1439089694}
   - component: {fileID: 1439089693}
   - component: {fileID: 1439089692}
+  - component: {fileID: 1439089695}
   m_Layer: 0
   m_Name: Door Panel
   m_TagString: Untagged
@@ -1482,6 +1483,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1439089690}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1439089695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439089690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b1fdc3397488d4b99b94cd1dc61561, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 896697201}
+  lookAtTriggerName: LookAt
+  lookAwayTriggerName: LookAway
+  lookingAtBoolName: LookingAt
+  mouseDownTriggerName: MouseDown
+  mouseUpTriggerName: MouseUp
+  mouseDragBoolName: MouseDrag
 --- !u!1 &1512000925
 GameObject:
   m_ObjectHideFlags: 0
@@ -1772,7 +1792,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1676611303}
   m_Layer: 0
-  m_Name: Door (1)
+  m_Name: DoorTwo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
